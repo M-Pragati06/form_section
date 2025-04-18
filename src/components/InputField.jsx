@@ -4,6 +4,8 @@ const InputField = ({ label, type, options, ...props }) => {
   const [field, meta] = useField(props);
 
   if (type === 'select') {
+    // this component renders a select input field
+    // It takes the label, type, options, and other props as arguments.
     return (
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700 mb-1">

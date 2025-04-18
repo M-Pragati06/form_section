@@ -11,6 +11,7 @@ const MultiStepForm = () => {
   const [formData, setFormData] = useState({});
 
   const formSteps = [
+    // Personal details
     {
       title: 'Personal Details',
       icon: (
@@ -61,6 +62,7 @@ const MultiStepForm = () => {
         },
       ],
     },
+    // address details
     {
       title: 'Address Details',
       icon: (
@@ -111,6 +113,7 @@ const MultiStepForm = () => {
         },
       ],
     },
+    // preferences code
     {
       title: 'Preferences',
       icon: (
@@ -173,25 +176,25 @@ const MultiStepForm = () => {
       }, {})
     );
   };
-
+// next button functionality
   const handleNext = (values, { setSubmitting, setTouched }) => {
     setFormData({ ...formData, ...values });
     setSubmitting(false);
     setTouched({});
     setStep(step + 1);
   };
-
+// previous button functionality
   const handlePrevious = () => {
     setStep(step - 1);
   };
-
+// submit button functionality
   const handleSubmit = (values, { setSubmitting }) => {
     const finalData = { ...formData, ...values };
     console.log('Form submitted:', finalData);
     setSubmitting(false);
     setCompleted(true);
   };
-
+// form submission functionality
   if (completed) {
     return (
       <div className="p-4">
@@ -244,7 +247,7 @@ const MultiStepForm = () => {
           </div>
           <p className="text-gray-500 font-medium">Step {step} of {formSteps.length}</p>
         </div>
-        
+        {/* form summary */}
         <Formik
           initialValues={step === 1 ? initialValues : formData}
           validationSchema={validationSchema(step)}

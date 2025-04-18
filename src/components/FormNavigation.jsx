@@ -5,6 +5,8 @@ const FormNavigation = ({
     isValid,
     isSubmitting,
   }) => {
+    // form navigation component
+    // This component handles the navigation between steps in a multi-step form.
     return (
       <div className="flex justify-between mt-6">
         {currentStep > 1 ? (

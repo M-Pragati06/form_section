@@ -1,6 +1,8 @@
 import InputField from './InputField';
 
 const FormStep = ({ step, formSteps }) => {
+  // This component renders the fields for the current step of the form.
+  // It takes the current step number and the form steps data as props.
   return (
     <div className="space-y-4">
       {formSteps[step - 1].fields.map((field) => (

@@ -1,6 +1,8 @@
 const ProgressBar = ({ currentStep, totalSteps }) => {
     const progressPercentage = ((currentStep - 1) / (totalSteps - 1)) * 100;
   
+    // This component renders a progress bar with steps and a filled bar indicating the current step.
+    // It takes the current step and total steps as props.
     return (
       <div className="mb-8">
         <div className="flex justify-between mb-2">
