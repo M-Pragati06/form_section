@@ -194,7 +194,7 @@ const MultiStepForm = () => {
 
   if (completed) {
     return (
-      <div className="min-h-screen flex items-center justify-center p-4">
+      <div className="p-4">
         <div className="w-full max-w-md mx-auto bg-white p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-100 transform transition-all duration-300 hover:shadow-2xl">
           <div className="text-center">
             <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-6 animate-bounce">
@@ -231,7 +231,7 @@ const MultiStepForm = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
+    <div className="p-4">
       <div className="w-full max-w-2xl mx-auto bg-gradient-to-r from-blue-50 to-indigo-200 p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl border border-gray-200 transform transition-all duration-300 hover:shadow-2xl">
         <ProgressBar currentStep={step} totalSteps={formSteps.length} />
         

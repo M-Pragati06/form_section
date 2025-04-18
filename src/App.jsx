@@ -5,10 +5,11 @@ import React from 'react';
 function App() {
   return (
     <div 
-      className="min-h-screen py-12 px-4 sm:px-6 lg:px-8" 
+      className="py-12 px-4 sm:px-6 lg:px-8" 
       style={{
         backgroundImage: `url(${bgImage})`,
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
+        minHeight: '100vh',
       }}
     >
       <MultiStepForm />
