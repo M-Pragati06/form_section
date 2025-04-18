@@ -51,7 +51,7 @@ const MultiStepForm = () => {
           type: 'tel',
           placeholder: '1234567890',
           validation: Yup.string()
-            .matches(/^[0-9+\-() ]+$/, 'Invalid phone number')
+            .matches(/^\d{10}$/, 'Invalid phone number')
             .required('Phone is required'),
           icon: (
             <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -101,7 +101,7 @@ const MultiStepForm = () => {
           type: 'text',
           placeholder: '10001',
           validation: Yup.string()
-            .matches(/^\d{5}(-\d{4})?$/, 'Invalid zip code')
+            .matches(/^\d{6}(-\d{4})?$/, 'Invalid zip code')
             .required('Zip code is required'),
           icon: (
             <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
